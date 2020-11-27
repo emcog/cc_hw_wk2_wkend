@@ -1,11 +1,3 @@
-### Annie are you Karaoke? Are you AnnieOkay?
-## Karaoke bar
+### Annie are you Karaoke? Are you Karaoke Annie?
 
-- Create
-    - Rooms
-    - Song's
-    - Guest's
-
-- Check in / check out guests from rooms (method on room & or method on guest)
-
-- Add song's to room's playlist
+![Annie are you okay?](img href)
