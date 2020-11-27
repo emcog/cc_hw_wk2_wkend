@@ -1,4 +1,4 @@
 class Room:
 
-    def __init__(self, name):
+    def __init__(self, name, capacity):
         pass

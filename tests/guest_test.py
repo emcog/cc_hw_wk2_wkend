@@ -1,8 +1,10 @@
 import unittest
 from src.guest import Guest
 
-# setup
-# create obj with name & favourite song
+class TestGuest(unittest.TestCase):
 
-# test has name
-# test has favourite song
+    def setUp(self):
+        self.guest_01 = Guest('Robin')
+
+    def test_guest_has_name(self):
+        self.assertEqual('Robin', self.guest_01.name)
