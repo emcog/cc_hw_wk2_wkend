@@ -24,13 +24,3 @@ class TestRoom(unittest.TestCase):
 
     def test_add_song(self):
         self.assertEqual('She Drives Me Crazy' self.open_mic_01.add_song)
-
-
-    # def test_check_out(self):
-
-
-
-# test room has capacity
-# test check in method
-# test check out method
-# test add song method
