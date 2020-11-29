@@ -11,6 +11,8 @@ class TestRoom(unittest.TestCase):
         self.open_mic_02 = Room('Open mic Tuesday', 5)
         self.open_mic_03 = Room('Open mic Wednesday', 6)
 
+        self.open_mic_01.check_in('Robin')
+
     def test_room_has_name(self):
         self.assertEqual('Wembley', self.wembley.name)
 
@@ -19,11 +21,12 @@ class TestRoom(unittest.TestCase):
 
     def test_no_of_guests(self):
         no_of_guests = self.open_mic_01.guests
-        self.assertEqual(0, len(no_of_guests))
+        self.assertEqual(1, len(no_of_guests))
     
-    # def test_check_in(self):
-        # call guest check_
-    #   self.assertEqual(4, len(self.open_mic_01.guests))
+    def test_check_in(self):
+        self.open_mic_01.check_in('Bob')
+        no_of_guests = self.open_mic_01.guests
+        self.assertEqual(2, len(no_of_guests))
 
     def add_song(self):
         self.assertEqual('She Drives Me Crazy', self.open_mic_01.add_song)
