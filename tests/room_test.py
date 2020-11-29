@@ -13,6 +13,12 @@ class TestRoom(unittest.TestCase):
 
         self.open_mic_01.check_in('Robin')
 
+        self.open_mic_02.check_in('John')
+        self.open_mic_02.check_in('Paul')
+        self.open_mic_02.check_in('George')
+        self.open_mic_02.check_in('Ringo')
+        self.open_mic_02.check_out('John')
+
     def test_room_has_name(self):
         self.assertEqual('Wembley', self.wembley.name)
 
@@ -31,6 +37,12 @@ class TestRoom(unittest.TestCase):
     def add_song(self):
         self.assertEqual('She Drives Me Crazy', self.open_mic_01.add_song)
 
+    def test_check_out(self):
+        guest_left = [] 
+        
+        for guest in self.open_mic_02.guests:
+            if guest == 'John':
+                guest_left.append(guest)
+        
 
-    # def test_check_out(self):
-    #     self.assertEqual(4, self.open_mic_01.check_out)
+        self.assertEqual(0, len(guest_left))
