@@ -1,5 +1,6 @@
 import unittest
 from src.room import Room
+from src.song import Song
 
 class TestRoom(unittest.TestCase):
 
@@ -16,11 +17,11 @@ class TestRoom(unittest.TestCase):
     def test_room_has_capacity(self):
         self.assertEqual(21, self.glasto.capacity)
 
+    def add_song(self):
+        self.assertEqual('She Drives Me Crazy', self.open_mic_01.add_song)
+
     # def test_check_in(self):
     #   self.assertEqual(4, self.open_mic_01.check_in)
 
     # def test_check_out(self):
     #     self.assertEqual(4, self.open_mic_01.check_out)
-
-    # def test_add_song(self):
-    #     self.assertEqual('She Drives Me Crazy' self.open_mic_01.add_song)
