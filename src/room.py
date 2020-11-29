@@ -13,10 +13,11 @@ class Room:
 
 
     def check_in(self, guest):
-        # guest checks in to room
-        self.guests.append(guest)
+        if len(self.guests) < self.capacity:
+            self.guests.append(guest)
+        else:
+            return 'Sorry its one in one out'
 
 
     def check_out(self, guest):
-        # guest checks in to room
         self.guests.remove(guest)
