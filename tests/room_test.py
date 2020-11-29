@@ -19,6 +19,10 @@ class TestRoom(unittest.TestCase):
         self.open_mic_02.check_in('Ringo')
         self.open_mic_02.check_out('John')
 
+        self.open_mic_02.check_in('Bubbles')
+        self.open_mic_02.check_in('Micheal Jackson')
+
+
     def test_room_has_name(self):
         self.assertEqual('Wembley', self.wembley.name)
 
@@ -43,6 +47,10 @@ class TestRoom(unittest.TestCase):
         for guest in self.open_mic_02.guests:
             if guest == 'John':
                 guest_left.append(guest)
-        
 
         self.assertEqual(0, len(guest_left))
+
+    def test_too_many_guests(self):
+        guests_in_room = len(self.open_mic_02.guests)
+        capacity = self.open_mic_02.capacity
+        self.assertLessEqual(capacity, guests_in_room)
