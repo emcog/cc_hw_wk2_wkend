@@ -1,4 +1,5 @@
 class Room:
 
     def __init__(self, name, capacity):
-        pass
+        self.name = name
+        self.capacity = capacity
