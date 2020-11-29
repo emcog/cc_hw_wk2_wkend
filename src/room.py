@@ -4,6 +4,7 @@ class Room:
         self.name = name
         self.capacity = capacity
         self.playlist = []
+        self.guests = []
 
 
     def add_song(self, song):
@@ -11,4 +12,8 @@ class Room:
         self.playlist.append(song)
 
 
-        
+    def check_in(self, guest):
+        # guest checks in to room
+        self.guests.append(guest)
+
+    
