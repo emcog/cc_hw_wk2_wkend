@@ -16,7 +16,7 @@ class Room:
         if len(self.guests) < self.capacity:
             self.guests.append(guest)
         else:
-            return 'Sorry its one in one out'
+            print('Sorry its one in one out')
 
 
     def check_out(self, guest):
