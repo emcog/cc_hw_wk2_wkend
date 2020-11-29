@@ -17,10 +17,11 @@ class TestRoom(unittest.TestCase):
     def test_room_has_capacity(self):
         self.assertEqual(21, self.glasto.capacity)
 
-    def test_room_has_guests(self):
-        self.assertEqual(0, self.open_mic_01.guests)
+    def test_no_of_guests(self):
+        no_of_guests = self.open_mic_01.guests
+        self.assertEqual(0, len(no_of_guests))
     
-    def test_check_in(self):
+    # def test_check_in(self):
         # call guest check_
     #   self.assertEqual(4, len(self.open_mic_01.guests))
 
