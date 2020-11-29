@@ -19,6 +19,7 @@ class TestRoom(unittest.TestCase):
         self.open_mic_02.check_in('Ringo')
         self.open_mic_02.check_out('John')
 
+        self.open_mic_02.check_in('Fan')
         self.open_mic_02.check_in('Bubbles')
         self.open_mic_02.check_in('Micheal Jackson')
 
@@ -53,4 +54,4 @@ class TestRoom(unittest.TestCase):
     def test_too_many_guests(self):
         guests_in_room = len(self.open_mic_02.guests)
         capacity = self.open_mic_02.capacity
-        self.assertLessEqual(capacity, guests_in_room)
+        self.assertLessEqual(guests_in_room, capacity)
